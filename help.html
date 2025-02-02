@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajude a CZ IA</title>
+    <link rel="icon" href="./2-removebg-preview.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #1e1e1e;
+            color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 5px 20px;
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            animation: slideDown 1s ease-in-out;
+        }
+        .logo {
+            width: 80px;
+            height: auto;
+            cursor: pointer;
+        }
+        .nav-left, .nav-right {
+            display: flex;
+            gap: 20px;
+        }
+        .nav-left a, .nav-right a {
+            color: #f4f4f9;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .nav-left a:hover, .nav-right a:hover {
+            color: #007bff;
+        }
+        .footer {
+            position: absolute;
+            bottom: 5px;
+            font-size: 12px;
+            color: #888;
+            width: 100%;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .content {
+            background-color: #2c2c2c;
+            border-radius: 20px;
+            width: 95%;
+            max-width: 700px;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            animation: fadeInUp 1s ease-in-out;
+        }
+        .content h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .content p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .form-container input, .form-container textarea {
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+            background-color: #444;
+            color: #fff;
+            font-size: 14px;
+        }
+        .form-container button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border-radius: 10px;
+        }
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+        .qr-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .qr-container img {
+            width: 150px;
+            height: 150px;
+            margin-top: 10px;
+        }
+        .qr-container p {
+            font-size: 14px;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .qr-container .pix-key {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .notify {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="nav-left">
+            <a href="./index.html">Início</a>
+            <a href="https://czincodes.cloud">Site</a>
+        </div>
+        <a href="https://czincodes.cloud"><img src="2-removebg-preview.png" alt="Logo" class="logo"></a>
+        <div class="nav-right">
+            <a href="https://discord.gg/Gpy7rGqHg8">Discord</a>
+            <a href="https://wa.me/552499312615">Contato</a>
+        </div>
+    </div>
+    <div class="content">
+        <h1>Ajude a <a href="https://czincodes.cloud" style="color: #007bff; text-decoration: none;">CZ IA</a></h1>
+        <p>Contribua para manter a página e a IA gratuita. Qualquer valor é bem-vindo!</p>
+        <form id="contribution-form" class="form-container" action="https://formsubmit.co/matoscaua52@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="Nova contribuição para CZ IA">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="name" placeholder="Seu nome" required>
+            <input type="email" name="email" placeholder="Seu email (não obrigatório)">
+            <textarea name="message" placeholder="Ideia para adicionarmos e/ ou arrumarmos em nossa IA" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        <div class="qr-container">
+            <div class="pix-key">Chave PIX: 12345678900</div>
+            <img src="path/to/your/qrcode.png" alt="QR Code">
+            <p><strong>Ajude-nos a manter a página online!</strong></p>
+        </div>
+    </div>
+    <div class="footer">© 2023 CZ AI. Todos os direitos reservados.</div>
+    <div class="notify" id="notify">Ideia enviada com sucesso!</div>
+    <script>
+        document.getElementById('contribution-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = event.target.name.value;
+            const message = event.target.message.value;
+
+            const webhookURL = 'https://discord.com/api/webhooks/1335661944639852584/bKmtIdbgBeqnbAjEbtwX4dyQCpSvABl0btHr6VTapi7SfLKiOvCX3fE-4USy5uKiycy3';
+
+            const payload = {
+                embeds: [{
+                    title: 'Nova Ideia',
+                    color: 3447003, // Azul
+                    fields: [
+                        { name: 'Nome', value: name },
+                        { name: 'Ideia', value: message }
+                    ],
+                    footer: { text: '© 2025 CZ AI. Todos os direitos reservados.' }
+                }]
+            };
+
+            fetch(webhookURL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(payload)
+            }).then(response => {
+                if (response.ok) {
+                    const notify = document.getElementById('notify');
+                    notify.style.display = 'block';
+                    setTimeout(() => {
+                        notify.style.display = 'none';
+                    }, 3000);
+                    event.target.reset();
+                } else {
+                    alert('Erro ao enviar ideia.');
+                }
+            }).catch(error => {
+                console.error('Erro:', error);
+                alert('Erro ao enviar ideia.');
+            });
+        });
+    </script>
+</body>
+</html>

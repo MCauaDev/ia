@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1e1e2e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.chat-container {
+    width: 80%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #2a2a3a;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.chat-box {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.message {
+    max-width: 70%;
+    padding: 10px;
+    border-radius: 8px;
+    word-wrap: break-word;
+    font-size: 16px;
+}
+
+.user-message {
+    align-self: flex-end;
+    background: #0078ff;
+    color: white;
+}
+
+.ai-message {
+    align-self: flex-start;
+    background: #44475a;
+    color: white;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    font-size: 14px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    background: #333;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+}
+
+button {
+    background: #0078ff;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #005bbf;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.typing-indicator {
+    font-style: italic;
+    color: #bbb;
+}
+
+strong {
+    color: #ffcc00;
+}
+
+.logo-container {
+  text-align: center;
+  padding: 20px 0; /* Espaçamento em cima e embaixo da logo */
+}
+
+.logo-container img {
+  max-width: 100%;  /* A logo será responsiva e não ultrapassará o tamanho da tela */
+  height: auto;     /* Mantém a proporção da imagem */
+}
